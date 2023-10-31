@@ -5,11 +5,6 @@ import  getVenda  from '../../services/api';
 
 
 
-
-
-
-
-
 function Cards() {
     
     useEffect(() =>{
@@ -18,15 +13,7 @@ function Cards() {
         getVenda.getVenda(divId);
     },[])
 
-
-    // var divId = document.getElementById("mainCard") as HTMLDivElement;
-
-    // console.log("divID componente: ", divId);
-    // getVenda.getVenda(divId);
-
-
     return(
-    
     
             <div id = "mainCard" className="mainCard" >
                 

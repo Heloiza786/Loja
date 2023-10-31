@@ -4,22 +4,47 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Mensagem from './components/mensagem/Mensagem';
-// import UserInput from './components/userInput/UserInput';
-import ProjetoTrello from './components/projetoTrello/ProjetoTrello'
+//  import UserInput from './components/userInput/UserInput';
+// import ProjetoTrello from './components/projetoTrello/ProjetoTrello'
 import MainImage from './components/mainImage/MainImage'
 import Navbar from './components/navbar/Navbar'
+
+import CadastroEstoque from './components/cadastros/CadastroEstoque';
+import CadastroCliente from './components/cadastros/CadastroCliente';
+
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   // <React.StrictMode>
-  //   {/* <App /> */}
-  //   {/* <Mensagem/> */}
-  //  {/* <UserInput/> */}
-  //  <Navbar />
-  //  <ProjetoTrello/>
-   <MainImage/>
+  <>
+
+  
+    <BrowserRouter basename='/app' >
+   <Routes>
+    <Route path='/' element={ <Navbar /> } /> 
+    <Route path='/sobre' element= { <CadastroEstoque/> } />
+    {/* <Route path='/home' element= { <Navbar /> } /> */}
+    <Route path='/cadastroCliente' element= { <CadastroCliente /> } />
+    <Route path='/cadastroEstoque' element= { <CadastroEstoque /> } />
+
+
+     
+   
+   </Routes>
+   </ BrowserRouter > 
+
+    {/* <App /> */}
+     {/* <Mensagem/> */}
+    {/* <UserInput/> */}
+   {/* <Navbar /> */}
+   <MainImage />
+   </>
   // </React.StrictMode>
 );
 

@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 
 
-
-
-
 async function getVenda(divId : HTMLDivElement){
 
    
@@ -13,10 +10,10 @@ async function getVenda(divId : HTMLDivElement){
 
     await axios.get(vendaUrl)
     .then((response) =>{
-        // Metodo que serve para simular um array usando a estutura de um Json(Record)
+        
 
             const dataVenda: Record<string, {user: string, products: string, 
-                finishedSale: string, discount : string, Sale: string}> = 
+                finishedSale: string, discount : string, Sale: string, filters: String}> = 
                 response.data;
 
                 const dataVendaArray = Object.entries(dataVenda).map(
@@ -27,9 +24,6 @@ async function getVenda(divId : HTMLDivElement){
 
                     var content = "";
 
-
-        // return(
-             
                  dataVendaArray.forEach((dados) => {
 
                  
@@ -44,25 +38,26 @@ async function getVenda(divId : HTMLDivElement){
     
                             
                     <div class="home">
-                         ${dados.products} alt =""/>
+                        <img src = ${dados.products} alt =""/>
                     </div>
     
                     <div class="shop">
                     <
-                         ${dados.finishedSale}
+                        <img src ${dados.finishedSale}
                     </div>
                     
                     <div class="discount">
-                    
                     ${dados.discount} alt =""/>
-                 </div>
+                    </div>
 
-                 <div class="Sale">
-               
-                 ${dados.Sale} alt =""/>
-              </div>
+                    <div class="Sale">
+                
+                        ${dados.Sale} alt =""/>
+                    </div>
                     
-                    
+                    <div class= "filters"
+                        ${dados.filters} alt =""/>
+                    </div>
                     `;
      
 
@@ -71,8 +66,7 @@ async function getVenda(divId : HTMLDivElement){
      
 
     })
-    
-// );
+
 })
     .catch((error ) => {
         console.log(" O erro ocorrido foi ", error)

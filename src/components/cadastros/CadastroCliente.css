@@ -1,0 +1,59 @@
+.FlexPai{
+    text-align: left;
+  
+    justify-content: center;
+    align-items: center;
+    margin: 80px ;
+    display: block;
+ 
+}
+.nome{
+    text-align: left;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 80px ;
+    font-weight: bold 
+}
+.button{
+    width: 80px;
+    height: 20px;
+    padding: 10; 
+    color: #000;
+    
+}
+   
+
+.shop{
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: 80px ;
+    font-weight: bold
+}
+.nascimento{
+    text-align: left;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 80px ;
+    font-weight: bold
+}
+.discount{
+    text-align: left;
+
+    justify-content: center;
+    align-items: center;
+    margin: 80px ;
+    font-weight: bold
+}
+.cc{
+    
+    text-align: center;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 80px ;
+    font-weight: bold
+
+}
