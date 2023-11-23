@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Navbar.css';
 import { Link } from 'react-router-dom'
@@ -6,43 +6,73 @@ import { Link } from 'react-router-dom'
  
 
 function Navbar(){
-    return(
-       
-            <div className="FlexPai">
+    var endereco = document.location.href.split("/")[4];
 
-                <div className="home">
-                <label>Home</label>
-                    <Link to={'/home'}>
+    // useEffect(() => {
+    //     var endereco = document.location.href.split("/")[4];
+
+    //     if (endereco === "home") {
+    //       var divCliente = document.getElementById("home") as HTMLDivElement;
+    //       divCliente.classList.add("disableLink");
+          
+
+    //     } else if (endereco === "sobre") {
+    //       var divSobre = document.getElementById("sobre") as HTMLDivElement;
+    //       divSobre.classList.add("disableLink");
+
+    //     } 
+       
+    //   }, [])
+
+    
+      
+
+
+
+    return(
+//       { endereco === "home" ?(<Link to = {"/home"} className="disableLink"> CLIENTE )}
+// <Link to={}
+            <div className="FlexPai">
+               
+
+               <div id="home">
+                    <Link to={'/home'} id="home">
                       Home
                       </Link>
-                </div>
+                      </div>
+                      {/* home vai para cadastrocliente */}
+                
 
-                <div className="sobre">
-                <label>Sobre</label>
-                    <Link to={'/sobre'}>
+                      <div id="sobre">
+                    <Link to={'/sobre'} >
                       Sobre
                       </Link>
-                </div>
+                      </div>
+
+                      {/* sobre vai para cadastroEstoque */}
+             
     
     
-                <div className="category">
-                    <label>Category</label>
-                </div>
+                     
+                    <Link to={'/category'} id="category"> 
+                    Category
+                    </Link>
+                        
+                    {/* category vai para cadastroUsuario */}
+                
     
-                <div className="outhers">
+                {/* <div className="outhers">
                     <label>Outhers</label>
                 </div>
     
                 <div className="contacts">
                     <label>Contacts</label>
                 </div>
-
-    
-                
+  
                 <div className="Botão">
                     
                     <button> Login</button>
-                </div>
+                </div> */}
                 
             </div>
     )

@@ -3,15 +3,22 @@ import axios from "axios";
 import  './CadastroCliente.css';
 import { Link } from 'react-router-dom'
 
+import Calendar from 'react-calendar';
+
+import Navbar from "../navbar/Navbar";
+
 function CadastroCliente(){
     return(
        
-            <div className="FlexPai">
+            <div className="FlexPai"> 
+            <Navbar/>
             <Link to={'/cadastroCliente'}>
+
             </Link>
 
             <div className=" cc">
-                    <h1> Cadastro de Cliente </h1>
+                    <h1> Cadastro de  Cliente </h1>
+
                 </div>
 
                 <div className="nome">
@@ -21,7 +28,7 @@ function CadastroCliente(){
                 </div>
 
                 <div className="shop">
-                    <label>shop: </label>
+                    <label> Shop: </label>
                     <input type="name" placeholder="Shop"></input>
                 </div>
     
@@ -37,6 +44,10 @@ function CadastroCliente(){
                    
 
                 </div>   
+
+
+
+                
             </div>
     )
     }

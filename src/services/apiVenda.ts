@@ -3,7 +3,10 @@ import axios from "axios";
 
 
 async function getVenda(divId : HTMLDivElement){
-
+    
+    var vendaUserInput = document.getElementById("vendaUserInput") as HTMLInputElement || null;
+    var vendaHome = document.getElementById("vendaHomeInput") as HTMLInputElement || null;
+    var vendaProducts = document.getElementById("vendaProductsInput") as HTMLInputElement || null;
    
     const  vendaUrl  = "http://localhost:4000/api/venda" ;
 

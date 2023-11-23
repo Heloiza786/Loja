@@ -8,11 +8,12 @@ import { error } from "console";
 
 
 
-function Teste(){
-<div> Teste</div>
-return
+// function Teste(){
+//     return(
+// <div> Teste</div>
+//     )
 
-}
+// }
 
 //   async function userDataGet(){
 //         var userNameInput = document.getElementById("userName") as HTMLInputElement || null;

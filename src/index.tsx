@@ -8,12 +8,12 @@ import reportWebVitals from './reportWebVitals';
 // import ProjetoTrello from './components/projetoTrello/ProjetoTrello'
 import MainImage from './components/mainImage/MainImage'
 import Navbar from './components/navbar/Navbar'
-
 import CadastroEstoque from './components/cadastros/CadastroEstoque';
 import CadastroCliente from './components/cadastros/CadastroCliente';
 
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CadastroUsuario from './components/cadastros/CadastroUsuario';
 
 
 
@@ -26,18 +26,26 @@ root.render(
 
   
     <BrowserRouter basename='/app' >
-   <Routes>
-    <Route path='/' element={ <Navbar /> } /> 
-    <Route path='/sobre' element= { <CadastroEstoque/> } />
-    {/* <Route path='/home' element= { <Navbar /> } /> */}
-    <Route path='/cadastroCliente' element= { <CadastroCliente /> } />
-    <Route path='/cadastroEstoque' element= { <CadastroEstoque /> } />
-
-
+    <Routes>
+      <Route path='/' element={ <Navbar /> } /> 
+      <Route path='/sobre' element= { <CadastroEstoque/> } />
+      <Route path='/home' element= { <CadastroCliente/> } />
+      <Route path='/category' element= { <CadastroUsuario/> } />
+      
      
-   
-   </Routes>
-   </ BrowserRouter > 
+     
+      {/* <Route path='/home' element= { <Navbar /> } /> */}
+
+      
+      {/* <Route path='/cadastroCliente'  element= { <CadastroCliente /> } />
+      <Route path='/cadastroEstoque' element= { <CadastroEstoque /> } />
+      <Route path='/cadastroVenda' element= { <CadastroUsuario /> } /> */}
+
+
+      {/* <Route path ='*' element = {<Navbar></Navbar>}></Route> */}
+
+    </Routes>
+    </ BrowserRouter > 
 
     {/* <App /> */}
      {/* <Mensagem/> */}

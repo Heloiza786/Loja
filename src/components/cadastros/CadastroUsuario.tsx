@@ -3,15 +3,16 @@ import axios from "axios";
 import  './CadastroUsuario.css';
 import { Link } from 'react-router-dom'
 
+
 function CadastroUsuario(){
     return(
        
             <div className="FlexPai">
-            <Link to={'/cadastroCliente'}>
+            <Link to={'/cadastroUsuario'}>
             </Link>
 
             <div className=" cc">
-                    <h1> Cadastro de Cliente </h1>
+                    <h1> Cadastro de Venda</h1>
                 </div>
 
                 <div className="nome">
@@ -32,11 +33,17 @@ function CadastroUsuario(){
     
                 <div className="discount">
                 <label> Discont: </label>
-                    
                     <input type="name" placeholder="Disconto"></input>
-                   
-
                 </div>   
+
+                <div className="Sale">
+                <label> Sale: </label>
+                    <input type="name" placeholder="Sale"></input>
+                </div>   
+                <div className="filters">
+                <label> Filters: </label>
+                    <input type="name" placeholder="Filters"></input>
+                </div>  
             </div>
     )
     }

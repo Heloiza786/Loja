@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './MainImage.css';
-import  getVenda  from '../../services/api';
+import  getVenda  from '../../services/apiVenda';
 
 
 

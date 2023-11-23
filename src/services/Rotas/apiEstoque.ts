@@ -67,7 +67,7 @@ async function GetEstoque( divId: HTMLDivElement){
         
             }
                 export default {GetEstoque, postEstoque}
-            
+               
             ;
            
 

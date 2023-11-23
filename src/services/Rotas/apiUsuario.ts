@@ -30,7 +30,7 @@ async function getUsuario(divId : HTMLDivElement){
     .then((response) =>{
         
 
-            const dataVenda: Record<string, {name: string, last_name: string, 
+            const dataVenda: Record<string, {name: string, lastName: string, 
                 cpf: string,  email: string, }> = 
                 response.data;
 
@@ -56,7 +56,7 @@ async function getUsuario(divId : HTMLDivElement){
     
                             
                     <div class="home">
-                        <img src = ${dados.last_name} alt =""/>
+                        <img src = ${dados.lastName} alt =""/>
                     </div>
     
                     <div class="shop">
